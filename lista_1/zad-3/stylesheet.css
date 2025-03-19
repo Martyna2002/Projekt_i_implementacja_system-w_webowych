@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.button-container {
+    /* (b) (c) */
+    display: flex; 
+    flex-wrap: wrap; /* Automatyczne przenoszenie przycisków do kolejnych wierszy */
+    gap: 10px; /* Odstęp 10px między przyciskami */
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    /* (a) usatlona szerokosc i wysokosc */
+    width: 15em;
+    height: 5em;
+    border: 2px solid #00aaff; /* (d) Niebieskawa ramka */
+    border-radius: 10px; /* (d) Zaokrąglone rogi */
+    background-color: #ffffff;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button i {
+    margin-right: 10px;
+}
+
+.button:hover {
+    color: #00aaff; /*  (e) Zmiana koloru tekstu na niebieski */
+}
+
+.button:focus {
+    box-shadow: 0 0 10px 4px rgba(0, 170, 255, 0.8);; /* (g)  przycisk wybrany np. poprzez klawisz “TAB” powinien być zaznaczony cieniem. */
+    outline: none;
+}
+
+
+.button:hover i, .button:hover span {
+    color: #00aaff; /* (e) zmiana ikony po najechaniu */
+}
+
+
+.fa-backward:before {
+    content: "\f04a"; /* Ikona "Go back" */
+}
+
+.fa-save:before {
+    content: "\f0c7"; /* Ikona "Save" */
+}
+
+.fa-trash:before {
+    content: "\f1f8"; /* Ikona "Delete" */
+}

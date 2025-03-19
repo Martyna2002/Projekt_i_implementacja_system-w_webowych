@@ -1,0 +1,41 @@
+body {
+    font-family: sans-serif;
+    max-width: 1024px;
+    margin-left: max((100vw - 1024px)/2, 3em);
+    margin-right: max((100vw - 1024px)/2, 3em);
+    margin-bottom: 2em;
+    background: lightgray;
+}
+
+p {
+    text-indent: 1em;
+    background: lightgray;
+    padding: 1em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+section, article {
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 1em;
+    border: 1px solid darkgray;
+}
+
+article {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body > * {
+    background-color: white;
+}
