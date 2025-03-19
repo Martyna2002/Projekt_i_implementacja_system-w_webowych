@@ -1,0 +1,65 @@
+* {
+    /* (i) Ustawienie box-sizing na border-box dla wszystkich elementów */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* (a) Krój pisma dla całej strony powinien być bezszeryfowy */
+    font-family: sans-serif;
+    
+    /* (b) Maksymalna szerokość tekstu dokumentu powinna wynosić 1024 piksele */
+    max-width: 1024px;
+    
+    /* (c) Wyśrodkowanie treści na większych ekranach z jasnoszarym marginesem */
+    margin-left: max((100vw - 1024px)/2, 3em);  /* Wyśrodkowanie na ekranach o szerokości większej niż 1024px */
+    margin-right: max((100vw - 1024px)/2, 3em); /* Wyśrodkowanie na ekranach o szerokości większej niż 1024px */
+    
+    /* (g) Górny i dolny margines tekstu powinien wynosić 2em */
+    margin-bottom: 2em;
+    
+    /* Kolor tła całej strony ustawiony na jasnoszary */
+    background: lightgray;
+}
+
+p {
+    /* (d) Odstępy między paragrafami powinny wynosić 2em */
+    text-indent: 1em;
+    background: lightgray;
+    padding: 1em;
+    
+    /* Odstępy górny i dolny dla paragrafów wynoszą 1em */
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+section, article {
+    /* (f) Boczne marginesy tekstu powinny wynosić 3em */
+    padding-left: 1em;  /* Margines wewnętrzny po lewej stronie */
+    padding-right: 1em; /* Margines wewnętrzny po prawej stronie */
+    
+    /* Odstępy między sekcjami i artykułami */
+    margin-bottom: 1em;
+    
+    /* Obramowanie sekcji i artykułów */
+    border: 1px solid darkgray;
+}
+
+article {
+    /* (e) Odstępy między rozdziałami (artykułami) powinny wynosić 3em */
+    margin-top: 2em;  /* Odstęp górny dla artykułów */
+    margin-bottom: 2em; /* Odstęp dolny dla artykułów */
+}
+
+html, body {
+    /* Zapewnienie, że cała strona ma wysokość 100% ekranu */
+    height: 100%;
+    /* Ustawienie układu strony na flex */
+    display: flex;
+}
+
+body > * {
+    /* (c) Biały ekran dla części z tekstem (wszystkie elementy wewnętrzne body mają białe tło) */
+    background-color: white;
+}

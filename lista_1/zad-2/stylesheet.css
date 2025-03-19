@@ -1,0 +1,59 @@
+html, body {
+    height: 100%;
+    min-width: 240px; 
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: auto; /* Umożliwia poziome przewijanie gdy szerkość mnejsza niż 240 */
+    overflow-y: hidden; /* Ukrywa pionowy pasek przewijania */
+}
+
+header {
+    background-color: #6c646a;
+    color: white;
+    text-align: center;
+    position: fixed; /* Nagłówek zawsze na górze */
+    width: 100vw;
+    height: 70px; /*usatlona szerokość */
+    padding: 20px;
+    font-size: 24px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 70px; /* Zaczyna się pod nagłówkiem */
+    left: 0;
+    width: 120px; /* Szerokość paska bocznego */
+    background-color: #6c646a;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100%;
+    color: #ffffff; 
+}
+
+.article {
+    margin-top: 70px; /* Aby artykuł zaczynał się poniżej nagłówka */
+    margin-left: 120px; /* przestrzeń po lewej stronie dla sidebaru */
+    padding: 20px;
+    box-sizing: border-box;
+    height: calc(100% - 70px); /* Dostosowanie wysokości artykułu */
+    overflow-y: auto; /* Pionowe przewijanie w artykule */
+}
+
+.sidebar ul {
+    padding: 0; 
+    list-style: none; 
+}
+
+.sidebar li {
+    margin-bottom: 10px; 
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #ffffff; 
+    font-size: 18px;
+}
+
+
+
+
