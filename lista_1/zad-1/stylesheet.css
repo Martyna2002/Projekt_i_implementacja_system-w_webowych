@@ -16,10 +16,7 @@ body {
     margin-left: max((100vw - 1024px)/2, 3em);  /* Wyśrodkowanie na ekranach o szerokości większej niż 1024px */
     margin-right: max((100vw - 1024px)/2, 3em); /* Wyśrodkowanie na ekranach o szerokości większej niż 1024px */
     
-    /* (g) Górny i dolny margines tekstu powinien wynosić 2em */
-    margin-bottom: 2em;
-    
-    /* Kolor tła całej strony ustawiony na jasnoszary */
+    /* (c) Kolor tła całej strony ustawiony na jasnoszary */
     background: lightgray;
 }
 
@@ -27,39 +24,65 @@ p {
     /* (d) Odstępy między paragrafami powinny wynosić 2em */
     text-indent: 1em;
     background: lightgray;
-    padding: 1em;
-    
-    /* Odstępy górny i dolny dla paragrafów wynoszą 1em */
+    padding: 0.5em;
     margin-bottom: 1em;
     margin-top: 1em;
 }
 
-section, article {
+section {
     /* (f) Boczne marginesy tekstu powinny wynosić 3em */
-    padding-left: 1em;  /* Margines wewnętrzny po lewej stronie */
-    padding-right: 1em; /* Margines wewnętrzny po prawej stronie */
-    
-    /* Odstępy między sekcjami i artykułami */
+    padding-left: 1em;  
+    padding-right: 1em; 
     margin-bottom: 1em;
-    
-    /* Obramowanie sekcji i artykułów */
+    margin-left: 3em;
+    margin-right: 3em;
     border: 1px solid darkgray;
 }
 
+
 article {
     /* (e) Odstępy między rozdziałami (artykułami) powinny wynosić 3em */
-    margin-top: 2em;  /* Odstęp górny dla artykułów */
-    margin-bottom: 2em; /* Odstęp dolny dla artykułów */
+    margin-top: 1em;  
+    margin-bottom: 1em; 
+    padding-left: 1em;  
+    padding-right: 1em;
+    border: 1px solid darkgray;
 }
 
 html, body {
-    /* Zapewnienie, że cała strona ma wysokość 100% ekranu */
     height: 100%;
-    /* Ustawienie układu strony na flex */
     display: flex;
 }
 
 body > * {
     /* (c) Biały ekran dla części z tekstem (wszystkie elementy wewnętrzne body mają białe tło) */
     background-color: white;
+}
+
+
+
+section section {
+    margin-left: 0em;
+    margin-right: 0em;
+}
+
+/* (h) Zadbaj, aby elementy h1, h2 i h3 różniły się wielkością zgodnie z semantyką */
+h1 {
+    font-size: xx-large;
+    margin-top: 2em; /* (g) Górny margines tekstu wynosi 2em */
+    margin-left: 1.5em;
+    margin-bottom: 0.5em;
+
+}
+
+h2 {
+    font-size: x-large;
+    margin-top: 0.5em;
+
+}
+
+h3 {
+    font-size: large;
+    margin-top: 0.5em;
+
 }
