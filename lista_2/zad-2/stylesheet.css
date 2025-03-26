@@ -1,0 +1,11 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Styl dla walidacji (c) */
+.was-validated .form-control:invalid {
+    border-color: red; 
+}
+.was-validated .form-control:valid {
+    border-color: green;
+}
