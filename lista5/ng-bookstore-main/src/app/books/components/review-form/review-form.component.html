@@ -1,0 +1,28 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label>
+      Title:
+      <input type="text" formControlName="title" />
+    </label>
+    <div *ngIf="form.get('title')?.invalid && form.get('title')?.touched">
+      <small style="color: red">Title is required.</small>
+    </div>
+  
+    <label>
+      Description:
+      <textarea formControlName="description"></textarea>
+    </label>
+    <div *ngIf="form.get('description')?.invalid && form.get('description')?.touched">
+      <small style="color: red">Description is required.</small>
+    </div>
+  
+    <label>
+      Rating (1–5):
+      <input type="number" formControlName="rate" />
+    </label>
+    <div *ngIf="form.get('rate')?.invalid && form.get('rate')?.touched">
+      <small style="color: red">Rate must be between 1 and 5.</small>
+    </div>
+  
+    <button type="submit" [disabled]="form.invalid">Save</button>
+  </form>
+  

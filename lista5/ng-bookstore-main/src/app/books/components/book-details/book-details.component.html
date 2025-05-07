@@ -1,0 +1,23 @@
+<h2>{{ book?.title }}</h2>
+<p><strong>Author:</strong> {{ book?.author }}</p>
+<p><strong>Year:</strong> {{ book?.year }}</p>
+<p><strong>Description:</strong> {{ book?.description }}</p>
+
+<a routerLink="/books">← Back to list</a>
+
+
+<h3>Reviews</h3>
+
+<ng-container *ngIf="reviews && reviews.length > 0; else noReviews">
+    <bs-review-item *ngFor="let review of reviews" [review]="review" />
+  </ng-container>
+  
+  <ng-template #noReviews>
+    <p>No reviews available.</p>
+  </ng-template>
+  
+  
+<h4>Add a Review</h4>
+  <bs-review-form (reviewCreated)="onReviewCreated($event)"></bs-review-form>
+  
+

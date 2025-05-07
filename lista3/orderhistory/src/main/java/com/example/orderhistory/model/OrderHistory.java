@@ -8,7 +8,7 @@ public class OrderHistory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    //podpdunkt e infor o zmaowieniu
     private String customerName;
     private String deliveryAddress;
     private String products; // nazwy po przecinku

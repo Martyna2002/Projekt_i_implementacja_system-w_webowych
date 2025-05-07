@@ -3,7 +3,7 @@ package com.piisw.jpa.tasks;
 import com.piisw.jpa.entities.Event;
 import com.piisw.jpa.entities.Follower;
 import com.piisw.jpa.entities.Comment;
-import com.piisw.jpa.entities.RequestEvent;  // Use concrete subclass of Event
+import com.piisw.jpa.entities.RequestEvent; 
 import com.piisw.jpa.services.ServerService;
 import com.piisw.jpa.repositories.EventRepository;
 import com.piisw.jpa.repositories.ServerRepository;

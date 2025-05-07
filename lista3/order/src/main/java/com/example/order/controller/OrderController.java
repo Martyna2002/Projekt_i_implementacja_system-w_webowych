@@ -15,12 +15,13 @@ public class OrderController {
     public OrderController(OrderService service) {
         this.service = service;
     }
-
+    
+    // REST API do tworzenia obiektu typu Order
     @PostMapping
     public ResponseEntity<Order> create(@RequestBody Order order) {
         return ResponseEntity.ok(service.create(order));
     }
-
+    // REST API do aktualizacji statusu dostawy 
     @PutMapping("/{id}/status")
     public ResponseEntity<Order> updateStatus(@PathVariable Long id, @RequestParam DeliveryStatus status) {
         return ResponseEntity.ok(service.updateStatus(id, status));

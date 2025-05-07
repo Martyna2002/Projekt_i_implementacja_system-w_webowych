@@ -1,0 +1,109 @@
+<h2>Edit Book</h2>
+
+<form 
+  [formGroup]="form" 
+  novalidate
+>
+  <!-- TITLE -->
+  <label>
+    Title:
+    <input
+      type="text"
+      formControlName="title"
+      [class.invalid]="
+        form.get('title')?.invalid && 
+        form.get('title')?.touched
+      "
+    />
+  </label>
+  <div 
+    *ngIf="
+      form.get('title')?.invalid && 
+      form.get('title')?.touched
+    " 
+    class="error"
+  >
+    Title is required and must be max 50 characters.
+  </div>
+
+  <!-- AUTHOR -->
+  <label>
+    Author:
+    <input
+      type="text"
+      formControlName="author"
+      [class.invalid]="
+        form.get('author')?.invalid && 
+        form.get('author')?.touched
+      "
+    />
+  </label>
+  <div 
+    *ngIf="
+      form.get('author')?.invalid && 
+      form.get('author')?.touched
+    " 
+    class="error"
+  >
+    Author is required and must be max 50 characters.
+  </div>
+
+  <!-- YEAR -->
+  <label>
+    Year:
+    <input
+      type="number"
+      formControlName="year"
+      [class.invalid]="
+        form.get('year')?.invalid && 
+        form.get('year')?.touched
+      "
+    />
+  </label>
+  <div 
+    *ngIf="
+      form.get('year')?.invalid && 
+      form.get('year')?.touched
+    " 
+    class="error"
+  >
+    Year must be between 1000 and 2023.
+  </div>
+
+  <!-- DESCRIPTION -->
+  <label>
+    Description:
+    <textarea
+      formControlName="description"
+      [class.invalid]="
+        form.get('description')?.invalid && 
+        form.get('description')?.touched
+      "
+    ></textarea>
+  </label>
+  <div 
+    *ngIf="
+      form.get('description')?.invalid && 
+      form.get('description')?.touched
+    " 
+    class="error"
+  >
+    Description must be max 1000 characters.
+  </div>
+
+  <!-- BUTTONS -->
+  <button
+    type="button"
+    (click)="onSave()"
+    [disabled]="form.invalid || !form.dirty"
+  >
+    Save
+  </button>
+
+  <button
+    type="button"
+    (click)="onCancel()"
+  >
+    Cancel
+  </button>
+</form>

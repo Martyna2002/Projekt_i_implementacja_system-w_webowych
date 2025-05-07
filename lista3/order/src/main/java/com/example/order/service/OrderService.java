@@ -27,9 +27,9 @@ public class OrderService {
     public Order updateStatus(Long id, DeliveryStatus status) {
         Order order = repository.findById(id).orElseThrow();
         order.setStatus(status);
-        Order saved = repository.save(order); // najpierw zapisz
+        Order saved = repository.save(order); 
 
-        sendToHistory(saved); // potem wyślij do historii
+        sendToHistory(saved); 
 
         return saved;
     }
@@ -43,7 +43,7 @@ public class OrderService {
         request.put("customerName", order.getCustomerName());
         request.put("deliveryAddress", order.getDeliveryAddress());
         request.put("products", String.join(", ", order.getProducts()));
-        request.put("totalValue", 0); // możesz dodać wyliczenie
+        request.put("totalValue", 0); 
         request.put("status", order.getStatus().name());
 
         restTemplate.postForObject(historyUrl, request, Void.class);

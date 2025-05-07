@@ -1,6 +1,6 @@
 package com.example.order;
 
-import org.springframework.boot.SpringApplication;
+import org.springframework.boot.SpringApplication; // springbooth app
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication

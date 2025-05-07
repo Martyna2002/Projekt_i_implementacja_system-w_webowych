@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
+import org.hibernate.annotations.Where;
+import org.hibernate.annotations.SQLDelete;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
@@ -16,6 +18,8 @@ import java.time.LocalDateTime;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 
 @EntityListeners(org.springframework.data.jpa.domain.support.AuditingEntityListener.class)
+@SQLDelete(sql = "UPDATE server SET is_active = false WHERE id = ?")
+@Where(clause = "is_active = true")
 public class Server {
 
     @Id
@@ -29,20 +33,20 @@ public class Server {
     @Column(nullable = false)
     private String ip;
 
-   
+   // Optimistic Locking 
     @Version
     private int version;
 
-
+    // createdDate
     @CreatedDate
     @Column(updatable = false)
     private LocalDateTime createdDate;
 
-  
+    // lastUpdateDate
     @LastModifiedDate
     private LocalDateTime lastUpdateDate;
 
-   
+   // Soft delete
     @Column(nullable = false)
     private boolean isActive = true;
 

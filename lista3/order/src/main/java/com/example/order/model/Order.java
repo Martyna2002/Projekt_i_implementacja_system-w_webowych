@@ -9,6 +9,8 @@ public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    // infor do podpunktu h
+    
     private Long id;
 
     private String customerName;
