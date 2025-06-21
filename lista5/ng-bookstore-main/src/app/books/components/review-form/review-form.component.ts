@@ -11,7 +11,7 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
 })
 export class ReviewFormComponent {
   @Output() reviewCreated = new EventEmitter<{ title: string; description: string; rate: number }>();
-
+  // 3a fromularz
   form: FormGroup = this.fb.group({
     title: ['', [Validators.required]],
     description: ['', [Validators.required]],

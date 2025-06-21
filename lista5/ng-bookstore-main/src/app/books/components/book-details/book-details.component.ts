@@ -27,15 +27,16 @@ export class BookDetailsComponent implements OnInit {
     this.reviews = this.route.snapshot.data['reviews'];
     console.log('LOADED REVIEWS:', this.reviews);
   }
-
+// zad 4b
   onReviewCreated(review: Omit<Review, 'id' | 'forBook'>): void {
     const newReview: Review = {
       ...review,
       forBook: this.book.id,
       id: 0 
     };
-  
+  //  zad 4c
     this.reviewsService.addReview(newReview).subscribe(saved => {
+      // zad 4d widok aktualkizuje sie autmatycznie 
       this.reviews.push(saved); 
     });
   }

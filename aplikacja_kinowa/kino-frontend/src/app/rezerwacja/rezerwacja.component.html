@@ -1,0 +1,20 @@
+<h3>🪑 Wybierz miejsca:</h3>
+
+<div class="sala">
+  <div 
+    *ngFor="let m of miejsca"
+    class="miejsce"
+    [class.wybrane]="m.wybrane"
+    [class.zajete]="m.zajete"
+    (click)="toggleMiejsce(m)">
+    {{ m.numer }}
+  </div>
+</div>
+
+<div style="margin-top: 16px;">
+  <button (click)="zarezerwuj()">Rezerwuj</button>
+</div>
+
+<div *ngIf="kodRezerwacji" style="margin-top: 12px;">
+  ✅ Twój kod rezerwacji: <strong>{{ kodRezerwacji }}</strong>
+</div>

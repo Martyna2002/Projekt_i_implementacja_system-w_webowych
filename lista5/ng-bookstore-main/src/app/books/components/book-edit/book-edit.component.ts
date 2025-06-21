@@ -42,7 +42,7 @@ export class BookEditComponent implements OnInit {
   ngOnInit(): void {
     this.book = this.route.snapshot.data['book'];
 
-    this.form = this.fb.group({ //2(c)
+    this.form = this.fb.group({ //2(c) walidacja formularza
       title: [this.book.title, [Validators.required, Validators.maxLength(50)]],
       author: [this.book.author, [Validators.required, Validators.maxLength(50)]],
       year: [this.book.year, [Validators.required, Validators.min(1000), Validators.max(2023)]],

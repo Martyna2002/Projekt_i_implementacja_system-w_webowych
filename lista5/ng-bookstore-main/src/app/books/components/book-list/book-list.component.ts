@@ -30,17 +30,17 @@ export class BookListComponent {
     // Reagowanie na wpisywanie
     this.searchControl.valueChanges
       .pipe(
-        debounceTime(200),
+        debounceTime(200), //ograniczenie do 200
         distinctUntilChanged(),
         switchMap(query => {
-          if (query && query.length >= 2) {
+          if (query && query.length >= 2) { //jesli dwa znaki
             return this.booksService.searchBooks(query);
-          } else {
+          } else { //reste do pelnej listy
             return this.booksService.getAllBooks();
           }
         })
       )
-      .subscribe(results => {
+      .subscribe(results => { //automatyczna aktualizacja listy
         this.books = results;
       });
   }

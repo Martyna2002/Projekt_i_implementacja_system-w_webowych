@@ -1,0 +1,29 @@
+.sala {
+    display: grid;
+    grid-template-columns: repeat(6, 50px);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .miejsce {
+    width: 50px;
+    height: 50px;
+    background-color: lightgray;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .miejsce.wybrane {
+    background-color: green;
+    color: white;
+  }
+  
+  .miejsce.zajete {
+    background-color: darkred;
+    color: white;
+    cursor: not-allowed;
+  }
+  

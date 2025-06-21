@@ -2,10 +2,10 @@
   "books": [
     {
       "id": 1,
-      "title": "Solaris1",
-      "author": "Stanisław Lem",
+      "title": "fgfg",
+      "author": "kshxs",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu enim augue. Vestibulum sed hendrerit nisl. Sed ullamcorper tempor neque. ",
-      "year": 1961
+      "year": 1962
     },
     {
       "id": 2,
@@ -57,6 +57,27 @@
       "rate": 4,
       "forBook": 1,
       "id": 4
+    },
+    {
+      "title": "test",
+      "description": "tetst",
+      "rate": 5,
+      "forBook": 1,
+      "id": 5
+    },
+    {
+      "title": "xyz",
+      "description": "gghjj",
+      "rate": 4,
+      "forBook": 1,
+      "id": 6
+    },
+    {
+      "title": "vghh",
+      "description": "gahh",
+      "rate": 4,
+      "forBook": 1,
+      "id": 7
     }
   ]
 }

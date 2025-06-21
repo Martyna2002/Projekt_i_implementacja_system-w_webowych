@@ -1,13 +1,16 @@
+
+<!-- 1(b) widok title, year, itp -->
 <h2>{{ book?.title }}</h2>
 <p><strong>Author:</strong> {{ book?.author }}</p>
 <p><strong>Year:</strong> {{ book?.year }}</p>
 <p><strong>Description:</strong> {{ book?.description }}</p>
 
+<!-- 1d link poweroty do strony books, angularowy router pozwala na przesjcie do stron -->
 <a routerLink="/books">← Back to list</a>
 
 
 <h3>Reviews</h3>
-
+<!-- 3a -->
 <ng-container *ngIf="reviews && reviews.length > 0; else noReviews">
     <bs-review-item *ngFor="let review of reviews" [review]="review" />
   </ng-container>
@@ -18,6 +21,7 @@
   
   
 <h4>Add a Review</h4>
+<!-- 3 d umieszczenie recenji na widoku sczegolowym -->
   <bs-review-form (reviewCreated)="onReviewCreated($event)"></bs-review-form>
   
 

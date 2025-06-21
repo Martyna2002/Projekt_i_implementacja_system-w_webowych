@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Resolve, ActivatedRouteSnapshot } from '@angular/router';
+import { Resolve, ActivatedRouteSnapshot } from '@angular/router'; //tworzenie resolvera, importy danych tras
 import { Observable } from 'rxjs';
 import { BooksService } from '../services/books.service';
 import { Book } from '../model/book';

@@ -1,3 +1,5 @@
+
+<!-- zad 5pole do search  -->
 <input
   type="text"
   placeholder="Search books..."
@@ -17,6 +19,7 @@
           <p class="card-text">
             {{ book.description }}
           </p>
+          <!-- link do srtony edit i review -->
           <a [routerLink]="[book.id, 'edit']" class="card-link">Edit</a>
           <a [routerLink]="[book.id, 'reviews']" class="card-link">Reviews</a>
         </div>

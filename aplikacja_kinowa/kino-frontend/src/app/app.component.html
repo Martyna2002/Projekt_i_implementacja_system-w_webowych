@@ -1,0 +1,10 @@
+<!-- src/app/app.component.html -->
+
+<app-seanse *ngIf="!wybranySeansId" (wybranoSeans)="ustawSeans($event)"></app-seanse>
+
+<app-rezerwacja *ngIf="wybranySeansId" [seansId]="wybranySeansId"></app-rezerwacja>
+
+
+<button *ngIf="wybranySeansId" (click)="wrocDoRepertuaru()">
+  ⬅️ Wróć do repertuaru
+</button>

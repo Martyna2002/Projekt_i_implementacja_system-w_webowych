@@ -21,11 +21,11 @@ export class BooksService {
   findBookById(id: number): Observable<Book> {
     return this.http.get<Book>(`${booksApiPrefix}/${id}`);
   }
-  
+  //zad 2 (d)
   saveBook(book: Book): Observable<Book> {
     return this.http.put<Book>(`/api/books/${book.id}`, book);
   }
-
+  //zad 5
   searchBooks(query: string): Observable<Book[]> {
     return this.http.get<Book[]>(`/api/books?q=${query}`);
   }
